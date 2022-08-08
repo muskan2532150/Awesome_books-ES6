@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Patrick Hand', cursive;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  background-color: white;
+}
+
+.nav-bar-section {
+  margin: 1%;
+}
+
+.time {
+  text-align: end;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.nav-bar {
+  display: flex;
+  background-color: white;
+  justify-content: space-between;
+  padding: 10px 8%;
+  align-items: center;
+  border: 2px solid black;
+  font-weight: 700;
+}
+
+.nav-links {
+  display: flex;
+}
+
+.nav-links li {
+  padding: 4px 8px;
+  border-right: 1px solid black;
+}
+
+.nav-links li a:hover,
+.nav-links li a:focus {
+  color: rgb(24, 139, 24);
+}
+
+.book-awesome {
+  width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+
+.display-area {
+  display: none;
+  text-align: center;
+}
+
+.display-book {
+  width: 490px;
+  border: 2px black solid;
+}
+
+.book-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  padding-inline: 10px;
+}
+
+.book-container:nth-child(odd) {
+  background-color: whitesmoke;
+}
+
+.remove-btn {
+  height: 80%;
+  border-radius: 0;
+  outline: none;
+  padding-inline: 8px;
+  border: 2px solid black;
+}
+
+.book-title {
+  /* font-size: 30px; */
+  line-height: 45px;
+}
+
+.add-book {
+  display: none;
+  flex-direction: column;
+  gap: 20px;
+  width: 300px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.book-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-end;
+}
+
+input {
+  width: 280px;
+  border-radius: 0;
+  outline: none;
+  border: 2px solid black;
+  height: 30px;
+}
+
+input::placeholder {
+  font-size: 15px;
+  padding-left: 10px;
+}
+
+.add-btn {
+  width: 50px;
+  border-radius: 0;
+  outline: none;
+  border: 2px solid black;
+}
+
+/* Contact */
+.contact {
+  display: none;
+}
+
+/* .contact.active{
+  display: block;
+} */
+
+.contact h2 {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.contact li {
+  list-style-type: disc;
+  line-height: 20px;
+}
+
+.footer {
+  border: 2px solid black;
+  padding: 22px;
+  width: 98%;
+  position: fixed;
+  bottom: 0;
+  margin: 20px;
+}
+
+.remove-btn:hover,
+.add-btn:hover {
+  cursor: pointer;
+  color: rgb(64, 65, 64);
+  border-color: rgb(83, 83, 83);
+}
+
+.active {
+  display: block;
+}
+
+.add-book.active {
+  display: flex;
+}

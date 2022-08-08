@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Awesome books</title>
+  </head>
+  <body>
+    <header class="nav-bar-section">
+      <nav class="nav-bar">
+        <a class="nav-logo" href="#">Awesome Books</a>
+        <ul class="nav-links">
+          <li class="nav"><a href="#List" class="link-link">List</a></li>
+          <li class="nav">
+            <a href="#addBook" class="addNew-link">Add New</a>
+          </li>
+          <li class="nav">
+            <a href="#contact" class="contact-link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+      <div >
+        <p class="time"></p>
+      </div>
+    </header>
+    
+    <main class="book-awesome">
+      <section class="display-area active" id="list">
+        <h1 class="book-title">All Awesome Books</h1>
+        <div class="display-book">
+          <div class="book-display-container" id="showBook"></div>
+        </div>
+      </section>
+      <section class="add-book" id="addBook">
+        <h2 class="form-header">Add a New Book</h2>
+        <form class="book-form">
+          <input type="text" id="Title" placeholder="Title" required />
+          <input type="text" id="Author" placeholder="Author" required />
+          <button class="add-btn" type="submit">Add</button>
+        </form>
+      </section>
+
+      <section id="contact" class="contact">
+        <h2>Contact Information</h2>
+        <p>Do you have any question or you want to say "Hello"?</p>
+        <p>You can reach out to us!</p>
+        <ul class="contact-ul">
+          <li>Our email:awesome@email.com</li>
+          <li>Our Phone number : 0123456789</li>
+          <li>Our address :Streetnote 123,City Country</li>
+        </ul>
+      </section>
+      <footer class="footer">
+        <h4>Copyright...</h4>
+      </footer>
+    </main>
+    <script src="./script.js" type="module"></script>
+  </body>
+</html>
