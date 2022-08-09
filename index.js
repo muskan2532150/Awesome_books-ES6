@@ -1,44 +1,14 @@
-import { DateTime } from './node_modules/luxon/build/es6/luxon.js';
+import {
+  displayContainer, addToBook, addBook, contact, bookSection, navLink, Time,
+} from './modules/Import.js';
 import Books from './modules/books.js';
+import Display from './modules/Display.js';
 import LocalStore from './modules/LocalStorage.js';
-
-const navLink = document.querySelectorAll('.nav');
-const contact = document.querySelector('.contact');
-const bookSection = document.querySelector('.display-area');
-const addBook = document.querySelector('.add-book');
-
-class Display {
-  static displayBooks() {
-    const books = LocalStore.getBooks();
-    books.forEach((book) => Display.addBook(book));
-  }
-
-  static addBook(book) {
-    const displayContainer = document.querySelector('.book-display-container');
-    const bookContainer = document.createElement('div');
-    bookContainer.className = 'book-container';
-    bookContainer.innerHTML = `
-        <p class="book-title">"${book.title}" by ${book.author}</p>
-        <button id= "${book.id}"class="remove-btn">Remove</button>
-    `;
-    displayContainer.appendChild(bookContainer);
-  }
-
-  static clearForm() {
-    document.getElementById('Title').value = '';
-    document.getElementById('Author').value = '';
-  }
-
-  static deleteBook(element) {
-    if (element.classList.contains('remove-btn')) {
-      element.parentElement.remove();
-    }
-  }
-}
+import { DateTime } from './node_modules/luxon/build/es6/luxon.js';
 
 document.addEventListener('DOMContentLoaded', Display.displayBooks);
 // Add a book from Event Listener
-const addToBook = document.querySelector('.book-form');
+
 addToBook.addEventListener('submit', (e) => {
   e.preventDefault();
   // Grab the Values
@@ -58,7 +28,6 @@ addToBook.addEventListener('submit', (e) => {
   addBook.classList.remove('active');
 });
 
-const displayContainer = document.querySelector('.book-display-container');
 displayContainer.addEventListener('click', (e) => {
   // remove from UI
   Display.deleteBook(e.target);
@@ -85,7 +54,6 @@ navLink.forEach((link, index) => {
   });
 });
 
-const Time = document.querySelector('.time');
 Time.textContent = ` ${DateTime.now().toJSDate().toLocaleTimeString('en-US', {
   weekday: 'short', day: 'numeric', year: 'numeric', month: 'long', hour: 'numeric', minute: 'numeric', second: 'numeric',
 })} `;
