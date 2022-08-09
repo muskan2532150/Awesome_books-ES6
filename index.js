@@ -1,5 +1,6 @@
-import Books from './books.js';
-import LocalStore from './LocalStorage.js';
+import { DateTime } from './node_modules/luxon/build/es6/luxon.js';
+import Books from './modules/books.js';
+import LocalStore from './modules/LocalStorage.js';
 
 const navLink = document.querySelectorAll('.nav');
 const contact = document.querySelector('.contact');
@@ -85,8 +86,6 @@ navLink.forEach((link, index) => {
 });
 
 const Time = document.querySelector('.time');
-const date = new Date();
-const format = {
-  month: 'long', weekday: 'long', day: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit',
-};
-Time.textContent = date.toLocaleTimeString('en-us', format);
+Time.textContent = ` ${DateTime.now().toJSDate().toLocaleTimeString('en-US', {
+  weekday: 'short', day: 'numeric', year: 'numeric', month: 'long', hour: 'numeric', minute: 'numeric', second: 'numeric',
+})} `;

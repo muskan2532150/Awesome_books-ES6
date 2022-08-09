@@ -23,8 +23,9 @@ class LocalStore {
 
   static removeBook(id) {
     const books = LocalStore.getBooks();
-    books.forEach((book, index) => { if (book.id.toString() === id.toString())  books.splice(index, 1); }
-    );
+    books.forEach((book, index) => {
+      if (book.id.toString() === id.toString()) books.splice(index, 1);
+    });
     localStorage.setItem('BookDetails', JSON.stringify(books));
   }
 }
