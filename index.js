@@ -1,8 +1,6 @@
-import {
-  displayContainer, addToBook, addBook, contact, bookSection, navLink, Time,
-} from './modules/Import.js';
+import { displayContainer, addToBook, addBook,contact,bookSection,navLink,Time } from "./modules/Import.js";
 import Books from './modules/books.js';
-import Display from './modules/Display.js';
+import Display from './modules/Display.js'
 import LocalStore from './modules/LocalStorage.js';
 import { DateTime } from './node_modules/luxon/build/es6/luxon.js';
 
@@ -27,6 +25,7 @@ addToBook.addEventListener('submit', (e) => {
   contact.classList.remove('active');
   addBook.classList.remove('active');
 });
+
 
 displayContainer.addEventListener('click', (e) => {
   // remove from UI
@@ -53,6 +52,7 @@ navLink.forEach((link, index) => {
     }
   });
 });
+
 
 Time.textContent = ` ${DateTime.now().toJSDate().toLocaleTimeString('en-US', {
   weekday: 'short', day: 'numeric', year: 'numeric', month: 'long', hour: 'numeric', minute: 'numeric', second: 'numeric',
