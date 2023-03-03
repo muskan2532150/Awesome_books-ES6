@@ -52,7 +52,7 @@ npm install --save-dev stylelint@13.x stylelint-scss@3.x stylelint-config-standa
 - GitHub: @muskan2532150
 - Github: @Sendy IU
 - Twitter: @muskan2532150
-- Twitter:
+
 
 ## 🤝 Contributing
 
